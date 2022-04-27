@@ -16,3 +16,9 @@ links.txt
 
 manifest
   Manifest file for use by resync script
+
+tex/
+  Faceting LaTeX document
+  faceting-tex git repository:
+  git@github.com:marcilr/faceting-tex.git
+  https://github.com/marcilr/faceting-tex
