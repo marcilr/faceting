@@ -1,0 +1,8 @@
+#.gitignore
+# Created Wed 18 May 2022 09:45:26 PM AKDT
+# by Raymond E. Marcil <marcilr@gmail.com>
+#
+# Files for git to ignore
+#
+.gitignore
+tex/
