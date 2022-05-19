@@ -17,6 +17,9 @@ links.txt
 manifest
   Manifest file for use by resync script
 
+pics/
+  Pictures
+
 tex/
   Faceting LaTeX document
   faceting-tex git repository:
