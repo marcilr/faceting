@@ -1,0 +1,54 @@
+books.txt
+Created Wed 18 May 2022 09:28:17 PM AKDT
+Copyright (C) 2022 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Whilst surfing facebook on android I spotted an ultratec v2
+faceting machine for $4200 with a couple good looking 
+books:
+
+Facet Cutters Handbook (own)
+Faceting Your First Five Gems
+The Faceting Handbook
+
+o Facet Cutters Handbook (own)
+  by Edward J. Soukup
+  The classic I had down in Australia.
+
+  price; $14.95
+  --Abebooks, May 18, 2022
+
+o Faceting Your First Five Gems
+  Unruh, Carl M.
+  Published by The Faceter's Gem, Richland, Washington, USA, 1978
+  "Paperback (Black Plastic Comb). Condition: Very Good. No Jacket. 
+  1st Edition. Clean copy, no writing or markings in text. Solid 
+  and square, no loose pages. Beige wrappers with black lettering 
+  on front, 86 single sided pages. Pages are held in place with a 
+  black plastic comb 1with 19 comb pieces which are all intact. 
+  The wrappers are mildly edge worn. BX27."
+  price: $49.00
+  --Abebooks, May 18, 2022
+
+o The Faceting Handbook
+  Margaret Reed, Ed Peters
+  Published by Reed Faceting
+  Condition: Good. Signed Copy First edition copy. . Signed 
+  by author on title page. (faceters, stones).
+  Seller: Wonder Book, Frederick, MD, U.S.A.
+  price: $29.99
+  --Abebooks, May 18, 2022
+
+Other:
+
+o Angulations (Creative Faceting Techniques 
+  & How to Facet a Gemstone) The Beginner's Handbook
+  Sherman, Dr. Joseph J.
+  Published by Biltmore Press,, 1976
+  Seller: Harry Alter, Sylva, NC, U.S.A.
+  paperback, Condition: Very Good, Biltmore Press, Asheville, 1976, 
+  1st., 5-1/2"x8-1/2", staple-bound wraps, 44pp., photos., VG $.
+  price: $35.00
+  Looked cool...
+  --Abebooks, May 18, 2022
+
