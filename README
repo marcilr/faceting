@@ -17,6 +17,9 @@ links.txt
 manifest
   Manifest file for use by resync script
 
+pdf/
+  Portable Document Format files
+
 pics/
   Pictures
 
