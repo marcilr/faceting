@@ -56,7 +56,8 @@ $ cd ~/git/faceting/tex/
 $ make cycle
 $
 
-The appendix was not built.
+6. Now creating an empty index at the end of the document.
+
 
 Links
 =====
