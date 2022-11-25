@@ -20,7 +20,8 @@ Thu 24 Nov 2022 09:27:22 PM AKST
 Testing building an index:
 
 
-oval.tex added:
+1. Include \index{entry} commands wherever you want an index entry.
+For oval.tex added:
 
 %% =================== Oval =======================
 %% =================== Oval ======================= 
@@ -28,9 +29,42 @@ oval.tex added:
 \subsection{Oval}
 \index{oval}        <===
 
+2. Include \usepackage{makeidx} and \makeindex in the preamble.
+160:%% 2. Include \usepackage{makeidx} and \makeindex in the preamble.
+168:\usepackage{makeidx}
+169:\makeidx
+
+3, $ grep -ni \printindex faceting.tex 
+161:%% 3. Put a \printindex command where the index is to appear, \
+normally before the \end{document} command.
+347:\printindex                                                          %% Index
+348:\end{document}
+
+4. cd ~/git/faceting/tex/00SECTIONS/design/oval
+$ makeindex oval.tex 
+This is makeindex, version 2.15 [TeX Live 2019/dev] (kpathsea + Thai support).
+Scanning input file oval.tex...done (0 entries accepted, 18 rejected).
+Nothing written in oval.ind.
+Transcript written in oval.ilg.
+$
+
+4. For appendix.tex appended:
+\printindex                                                          %% Index
+
+5. Build faceting document:
+$ cd ~/git/faceting/tex/
+$ make cycle
+$
+
+The appendix was not built.
 
 Links
 =====
+On-line Tutorial on LATEX
+Indian TEX Users Group
+URL: http://www.river-valley.com/tug
+https://tug.org/tutorials/tugindia/chap16-scr.pdf
+
 Indexing in LaTeX
 by Rob J Hyndman
 16 November 2007
