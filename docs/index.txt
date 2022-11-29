@@ -6,6 +6,8 @@ Copyright (C) 2022 by Raymond E. Marcil <marcilr@gmail.com>
 Index the document
 
 
+
+
 The standard subject index is created using the following procedure:
 
 1. Include \index{entry} commands wherever you want an index entry.
@@ -15,10 +17,111 @@ The standard subject index is created using the following procedure:
 --https://robjhyndman.com/
 
 
+Which command is responsible for printing the index in LaTeX?
+Finally, the command \printindex will actually render the index.
+--Indices - Overleaf, Online LaTeX Editor
+  https://www.overleaf.com/learn/latex/Indices
+
+
+Mon 28 Nov 2022 09:22:05 PM AKST
+================================
+Having another go at adding index to the faceting document.
+
+1. Add \usepackage{makeidx} in the preamble of the root/main TeX file. 
+Added \usepackage{makeidx} to faceting.tex:
+
+$ cd ~/git/faceting/tex/
+$ grep -ni "\usepackage{makeidx}" faceting.tex 
+160:%% 2. Include \usepackage{makeidx} and \makeindex in the preamble.
+168:\usepackage{makeidx}
+
+
+2. Add \makeindex in the preamble, just before \begin{document} is suggested.
+
+faceting.tex:265
+\makeindex
+\begin{document}
+
+Searching for above:
+
+$ cd ~/git/faceting/tex
+$ grep -ni makeindex faceting.tex 
+160:%% 2. Include \usepackage{makeidx} and \makeindex in the preamble.
+265:\makeindex
+$
+
+
+3. Add \printindex where a user wants the index to appear. 
+Usually, it is suggested to place just right before 
+\end{document} command.
+
+faceting.tex:347
+\printindex
+\end{document}
+
+
+Searching for above:
+
+$ cd ~/git/faceting/tex
+$ grep -ni end{document} faceting.tex 
+33:%% \end{document}
+114:%% \end{document}
+161:%% 3. Put a \printindex command where the index is to appear, normally before the \end{document} command.
+348:\end{document}
+$
+
+
+Based on index implementationa at:
+  Learn How to Create an Index Page in LaTeX
+  https://latex-tutorial.com/creating-index-latex/
+
+
+Not getting index on inspection of build from:
+$ cd ~/git/faceting/tex
+$ make cycle
+...
+
+That said see entries in faceting.idx:
+
+~/git/faceting/tex/faceting.idx:
+\indexentry{abstract|hyperpage}{1}
+\indexentry{Aussies|hyperpage}{10}
+\indexentry{faceting machine|hyperpage}{16}
+\indexentry{oval|hyperpage}{25}
+
+However the faceting.ind is empty:
+
+$ cd ~/git/faceting/tex/
+$ cat faceting.ind 
+$
+
+Looks like the key to producing the idn file is to run:
+makeindex jobname.idx, from the command line.
+
+Added index taget to the faceting Makefile to do so.
+
+Suspect the issue is that the index item is in the 
+oval.tex subfile.
+
+Hence need to use:
+$ cd ~/git/faceting/tex
+$ makeindex faceting
+This is makeindex, version 2.15 [TeX Live 2019/dev] (kpathsea + Thai support).
+Scanning input file faceting.idx....done (4 entries accepted, 0 rejected).
+Sorting entries....done (9 comparisons).
+Generating output file faceting.ind....done (14 lines written, 0 warnings).
+Output written in faceting.ind.
+Transcript written in faceting.ilg.
+$
+
+The faceting.idx index file is getting built.
+This appeared to produce the appropriate entries in faceting.ind
+
+
+
 Thu 24 Nov 2022 09:27:22 PM AKST
 ================================
 Testing building an index:
-
 
 1. Include \index{entry} commands wherever you want an index entry.
 For oval.tex added:
@@ -66,12 +169,16 @@ https://www.lode.de/blog/index-creation-in-latex
 
 Index Creation in LaTeX
 Lode Publishing
+Some good notes on what to index.
 https://www.lode.de/blog/index-creation-in-latex
 
 Indexing in LaTeX
 by Rob J Hyndman
 16 November 2007
 https://robjhyndman.com/hyndsight/indexing-in-latex/
+
+Learn How to Create an Index Page in LaTeX         <===
+https://latex-tutorial.com/creating-index-latex/
 
 On-line Tutorial on LATEX
 Indian TEX Users Group
