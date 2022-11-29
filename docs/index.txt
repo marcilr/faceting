@@ -61,12 +61,16 @@ $
 
 Links
 =====
-On-line Tutorial on LATEX
-Indian TEX Users Group
-URL: http://www.river-valley.com/tug
-https://tug.org/tutorials/tugindia/chap16-scr.pdf
+How to Generate and Edit an Index for LaTeX books vs Word
+https://www.lode.de/blog/index-creation-in-latex
 
 Indexing in LaTeX
 by Rob J Hyndman
 16 November 2007
 https://robjhyndman.com/hyndsight/indexing-in-latex/
+
+On-line Tutorial on LATEX
+Indian TEX Users Group
+URL: http://www.river-valley.com/tug
+https://tug.org/tutorials/tugindia/chap16-scr.pdf
+
