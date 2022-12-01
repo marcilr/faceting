@@ -23,6 +23,23 @@ Finally, the command \printindex will actually render the index.
   https://www.overleaf.com/learn/latex/Indices
 
 
+Wed 30 Nov 2022 04:06:21 PM AKST
+================================
+Updated Makefile to build index:
+
+Added index file variables:
+  IDX = $(BASENAME).idx
+  ILG = $(BASENAME).ilg
+  IND = $(BASENAME).ind
+
+Updated mostly-clean target to remove index files:
+  $(RM) -f $(IDX) $(ILG) $(IND)
+
+Updated dvi target with makeindex to create the index:
+  $(MAKEINDEX) $(IDX)
+  $(LATEX) $(TMP)
+
+
 Mon 28 Nov 2022 09:22:05 PM AKST
 ================================
 Having another go at adding index to the faceting document.
@@ -114,9 +131,85 @@ Output written in faceting.ind.
 Transcript written in faceting.ilg.
 $
 
-The faceting.idx index file is getting built.
-This appeared to produce the appropriate entries in faceting.ind
 
+o The faceting.idx index file is getting built by the Makefile
+o This is used to produce the appropriate entries in faceting.ind
+
+o However the faceting.ind is not getting built nor the index
+itself.
+
+o Again using 'makeindex faceting' at the command line populates
+the faceting.ind after doing an intial 'make' to get the faceting.idx
+with index entries.
+
+Hence:
+1. Run make to build faceting.idx
+2. run 'makeindex faceting' to build faceting.ind
+3. Build with index?
+
+Need to fix/update the above instructions.
+See:
+
+TEXnical Tips for Producing a “Clean” Index
+PUBLICATIONS TECHNICAL GROUP
+AMERICAN MATHEMATICAL SOCIETY
+https://www.ams.org/arc/tex/howto/index/0index-notes.pdf
+
+Learn How to Create an Index Page in LaTeX
+https://latex-tutorial.com/creating-index-latex/
+
+The outstanding question is how to build the index with the hierarchy of tex files?
+
+google: how to build a latex index with hierarchy of tex files?
+  build index from more \include{file} files - LaTeX Stack Exchange
+  https://tex.stackexchange.com/questions/339274/build-index-from-more-includefile-files
+
+  LaTeX/Indexing - Wikibooks, open books for an open world
+  https://en.wikibooks.org/wiki/LaTeX/Indexing
+
+  How do I create an index in TeX?
+  1. Indexing in LaTeX
+  2. Include \index{entry} commands wherever you want an index entry.
+  3. Include \usepackage{makeidx} and \makeindex in the preamble.
+     Put a \printindex command where the index is to appear, normally 
+     before the \end{document} command.
+  Nov 16, 2007
+  Indexing in LaTeX - Rob J Hyndman
+  https://robjhyndman.com/hyndsight/indexing-in-latex/
+
+  LaTeX/Indexing
+  package makeidx
+  LaTeX supports the creation of indices with its package makeidx, 
+  and its support program makeindex , called on some systems makeidx .
+  LaTeX/Indexing - Wikibooks, open books for an open world
+  1. To enable the indexing feature of LaTeX, the makeidx package 
+     must be loaded in the preamble:
+
+     faceting.tex:
+     168:\usepackage{makeidx}
+
+  2. Enable the special indexing commands by the \makeindex in input file:
+     faceting.tex
+     265:\makeindex
+
+  3. Tell LaTex what to index using the \index{key} command:
+     oval.tex:
+     10:\index{oval}
+
+  https://en.wikibooks.org > wiki > LaTeX > Indexing
+  https://en.wikibooks.org/wiki/LaTeX/Indexing
+
+  Running 'make cycle' builds the faceting.idx with index items.
+  However not getting index in final document.
+
+  TEXnical Tips for Producing a “Clean” Index
+  PUBLICATIONS TECHNICAL GROUP
+  AMERICAN MATHEMATICAL SOCIETY
+  This document does have a clean 2-column index!!!
+  https://www.ams.org/arc/tex/howto/index/0index-notes.pdf
+
+  I think the key is using /usr/bin/makeindex against all the 
+  tex files.
 
 
 Thu 24 Nov 2022 09:27:22 PM AKST
