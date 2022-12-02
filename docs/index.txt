@@ -23,6 +23,21 @@ Finally, the command \printindex will actually render the index.
   https://www.overleaf.com/learn/latex/Indices
 
 
+Index syntax
+============
+
+LaTeX Expressiom   Purpose
+--------------------------------------------------------------
+\item              For Keyword Index Entry
+\subitem	   For Sub Keyword Index Entry
+\subsubitem	   For Nested Keyword Index Entry
+\indexspace	   Leaves an Empty Line between Index Entries
+
+--Learn How to Create an Index Page in LaTeX
+  https://latex-tutorial.com/creating-index-latex/
+
+
+
 Wed 30 Nov 2022 04:06:21 PM AKST
 ================================
 Updated Makefile to build index:
