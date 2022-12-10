@@ -5,6 +5,10 @@ Copyright (C) 2022 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+conversion-table.eps
+  Created postscript file with:
+  $ convert conversion-table.jpg conversion-table.eps
+
 conversion-table.jpg
   https://i.pinimg.com/originals/6c/00/70/6c0070d1d4cd118e3928762dd2c15ef2.jpg
   6c0070d1d4cd118e3928762dd2c15ef2.jpg ===> conversion-table.jpg
