@@ -40,7 +40,7 @@ LaTeX Expressiom   Purpose
 
 Wed 30 Nov 2022 04:06:21 PM AKST
 ================================
-Updated Makefile to build index:
+o Updated Makefile to build index:
 
 Added index file variables:
   IDX = $(BASENAME).idx
@@ -53,6 +53,34 @@ Updated mostly-clean target to remove index files:
 Updated dvi target with makeindex to create the index:
   $(MAKEINDEX) $(IDX)
   $(LATEX) $(TMP)
+
+o Indexing in LaTeX
+Rob J Hyndman, 16 November 2007
+The standard subject index is created using the following procedure:
+
+1. Include \index{entry} commands wherever you want an index entry.
+$ grep -ni index 00SECTIONS/design/oval/oval.tex 
+10:\index{oval}
+
+
+2. Include \usepackage{makeidx} and \makeindex in the preamble.
+   facetin.tex
+   268:\usepackage{makeidx}
+   
+3. Put a \printindex command where the index is to appear, normally before the \end{document} command.
+
+https://tex.stackexchange.com/questions/98204/index-not-working
+Just to avoid confusion, the way to produce a generic index should be
+
+1. include \usepackage{makeidx}
+2. Put a \makeindex command in the preamble
+3. Put a \printindex where the index should appear
+4. Run LaTeX which generates an "fname".idx file
+5. Run makeindex "fname".idx to generate the "fname".ind
+6. Run LaTeX again to include the .ind file and generate the index in the document
+From your question, it is not clear if all of these parts are included in your process.
+answered Feb 14, 2013 at 14:07, Peter Jansson
+https://robjhyndman.com/hyndsight/indexing-in-latex/
 
 
 Mon 28 Nov 2022 09:22:05 PM AKST
