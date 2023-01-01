@@ -32,6 +32,9 @@ pdf/
 pics/
   Pictures
 
+software/
+  Computer software for faceting
+
 tex/
   Faceting LaTeX document
   faceting-tex git repository:
