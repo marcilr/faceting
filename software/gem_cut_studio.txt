@@ -1,0 +1,21 @@
+gem_cut_studio.txt
+Created Mon 02 Jan 2023 09:50:02 AM AKST
+Copyright (C) 2023 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+
+Links
+=====
+Gem Cut Studio user manaual
+https://gemcutstudio.com/documentation/
+
+Gem Cut Studio
+Nice looking software for faceting design
+Fully capable of importing GemCad design files
+Windows only.
+https://gemcutstudio.com/`
+
+Gem Cut Studio Software Lience
+USD $99.00
+Strike me as reasonable price
+https://gemcutstudio.com/product/gem-cut-software-licence/
