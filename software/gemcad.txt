@@ -1,0 +1,29 @@
+gemcad.txt
+Created Mon 02 Jan 2023 09:47:46 AM AKST
+Copyright (C) 2023 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+GemCad
+
+
+Links
+=====
+GemCad for Windows 32-bit
+Version 1.09
+price: $95
+Gemsoft Enterprises
+http://www.gemcad.com
+Mon 02 Jan 2023 08:43:03 PM AKST
+
+GemRay for Windows
+Requires prior purchase of GemCad
+price: $45
+Gemsoft Enterprises
+http://www.gemcad.com
+Mon 02 Jan 2023 08:43:03 PM AKST
+
+GemCad and GemRay for Windows: Buy both and save $10!
+price: $130
+Gemsoft Enterprises
+http://www.gemcad.com
+Mon 02 Jan 2023 08:43:03 PM AKST
