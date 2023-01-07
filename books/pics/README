@@ -16,14 +16,32 @@ facet-cutters-handbook.jpg
   ISBN 10: 0910652066
   ISBN 13: 9780910652063
   Remember this book from time in Australia.
+  size: 266 x 420
   price: $14.95 (own)
   https://www.abebooks.com/products/isbn/9780910652063...
   Downloaded Wed May 18 21:37:02 2022 -0800
 
-introduction_to_meetpoint_faceting.jpg
+facet-cutters-handbook-150.jpg
+facet-cutters-handbook-150.xcf
+  facet-cutters-handbook.jpg Scaled in gimp 
+  from 266 x 420 to 150 x 237 for display in:
+  git/faceting/books/index.html
+  size: 150 x 237
+
+introduction_to_meetpoint_faceting.jpg (116KB)
   9572568895.jpg
   ===> introduction_to_meetpoint_faceting.jpg
   https://www.rockpeddler.com/product/introduction-to-meetpoint-faceting-by-long-and-steele/
   https://www.rockpeddler.com/wp-content/uploads/2018/08/9572568895.jpg
   Downloaded Sun 20 Nov 2022 09:26:40 AM AKST
 
+introduction_to_meetpoint_faceting-150.jpg
+  9572568895.jpg
+  ===> introduction_to_meetpoint_faceting-150.jpg
+  introduction_to_meetpoint_faceting.jpg Scaled in gimp
+  from 1205 to 1500 to 150 x 187 for display in:
+  git/faceting/books/index.html
+  size: 150 x 187
+  https://www.rockpeddler.com/product/introduction-to-meetpoint-faceting-by-lon>
+  https://www.rockpeddler.com/wp-content/uploads/2018/08/9572568895.jpg
+  Downloaded Sun 20 Nov 2022 09:26:40 AM AKST
